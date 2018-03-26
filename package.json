@@ -1,0 +1,22 @@
+{
+    "title": "Union SCM",
+    "name": "union-scm",
+    "version": "4.0.0",
+    "description": "Homepage of union scm",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "font-awesome": "^4.7.0"
+    },
+    "devDependencies": {
+        "browser-sync": "2.23.6",
+        "gulp": "^3.9.1"
+    }
+}
