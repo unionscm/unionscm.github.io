@@ -24,6 +24,95 @@
 
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
+    <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+</style>
 
   </head>
 
@@ -42,44 +131,7 @@
               <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Portfolio
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                <a class="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
-                <a class="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
-                <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
-                <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
-                <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Blog
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
-                <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
-                <a class="dropdown-item" href="blog-post.html">Blog Post</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Other Pages
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                <a class="dropdown-item" href="full-width.html">Full Width Page</a>
-                <a class="dropdown-item" href="sidebar.html">Sidebar Page</a>
-                <a class="dropdown-item" href="faq.html">FAQ</a>
-                <a class="dropdown-item" href="404.html">404</a>
-                <a class="dropdown-item" href="pricing.html">Pricing Table</a>
-              </div>
             </li>
           </ul>
         </div>
@@ -158,12 +210,12 @@
         </div>
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Card Title</h4>
+            <h4 class="card-header">Products We Served</h4>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+              <img class="card-img" src="images/product.png" alt="">
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Learn More</a>
+              <a href="products.html" class="btn btn-primary">Learn More</a>
             </div>
           </div>
         </div>
@@ -171,111 +223,72 @@
       <!-- /.row -->
 
       <!-- Portfolio Section -->
-      <h2>Portfolio Heading</h2>
+      <h2>Work Flows</h2>
 
       <div class="row">
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="#"><img id='DTPCBARepairFlow' class="card-img-top" src="images/DTPCBARepairFlow.png" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project One</a>
+                DT/SVR PCBA Repair Flow
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="#"><img id='phonePCBARepairFlow' class="card-img-top" src="images/phonePCBARepairFlow.png" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Two</a>
+                Phone PCBA Repair Flow
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="#"><img id='LCDPanelRepairFlow' class="card-img-top" src="images/LCDPanelRepairFlow.png" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Three</a>
+                LCD Panel Repair Flow
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="#"><img id='sortingFlow' class="card-img-top" src="images/sortingFlow.png" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Four</a>
+                Sorting & RTV Flow
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="#"><img id='importFlow' class="card-img-top" src="images/importFlow.png" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Five</a>
+               Import Flow
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="#"><img id='ExportFlow' class="card-img-top" src="images/ExportFlow.png" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Six</a>
+                Export Flow
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
             </div>
           </div>
         </div>
       </div>
       <!-- /.row -->
 
-      <!-- Features Section -->
-      <div class="row">
-        <div class="col-lg-6">
-          <h2>Modern Business Features</h2>
-          <p>The Modern Business template by Start Bootstrap includes:</p>
-          <ul>
-            <li>
-              <strong>Bootstrap v4</strong>
-            </li>
-            <li>jQuery</li>
-            <li>Font Awesome</li>
-            <li>Working contact form with validation</li>
-            <li>Unstyled page elements for easy customization</li>
-          </ul>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
-        </div>
-        <div class="col-lg-6">
-          <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
-        </div>
-      </div>
-      <!-- /.row -->
-
-      <hr>
-
-      <!-- Call to Action Section -->
-      <div class="row mb-4">
-        <div class="col-md-8">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
-        </div>
-        <div class="col-md-4">
-          <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
-        </div>
-      </div>
 
     </div>
     <!-- /.container -->
@@ -288,11 +301,70 @@
       <!-- /.container -->
     </footer>
 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+document.getElementById('DTPCBARepairFlow').onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    $('nav').css('display','none');
+}
+document.getElementById('phonePCBARepairFlow').onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    $('nav').css('display','none');
+}
+document.getElementById('LCDPanelRepairFlow').onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    $('nav').css('display','none');
+}
+document.getElementById('sortingFlow').onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    $('nav').css('display','none');
+}
+document.getElementById('ExportFlow').onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    $('nav').css('display','none');
+}
+document.getElementById('importFlow').onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    $('nav').css('display','none');
+}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+    $('nav').css('display','block');
+}
+</script>
   </body>
 
 </html>
